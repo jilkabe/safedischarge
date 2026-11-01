@@ -12,8 +12,8 @@
 \setmainfont{Arial}[Ligatures=TeX]
 \setsansfont{Arial}[Ligatures=TeX]
 \setmonofont{Arial}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{3pt}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{1pt}
 \widowpenalty=10000
 \clubpenalty=10000
 \setlength{\emergencystretch}{1.5em}
@@ -21,21 +21,20 @@
 % ---------- Packages ----------
 \usepackage{microtype}
 \usepackage{xcolor}
-\definecolor{headblue}{HTML}{1F3A5F}
 \usepackage{graphicx}
 \graphicspath{{../../design/}{../../prototype/results/figures/}}
 \usepackage{booktabs,tabularx,array}
 \renewcommand{\arraystretch}{1.15}
-\usepackage[font=normalsize,labelfont=bf,labelsep=period,skip=4pt]{caption}
+\usepackage[font=normalsize,labelfont=bf,labelsep=colon,skip=4pt]{caption}
 \usepackage{needspace}
 \newcommand{\lead}[1]{\needspace{4\baselineskip}\textbf{#1}}
 \usepackage{enumitem}
 \setlist{nosep,leftmargin=1.5em,topsep=1pt}
 \usepackage{titlesec}
-\titleformat{\section}{\fontsize{12}{14}\selectfont\bfseries\color{headblue}}{\thesection.}{0.4em}{}
-\titleformat{\subsection}{\fontsize{10.5}{12.5}\selectfont\bfseries\color{headblue}}{\thesubsection}{0.5em}{}
-\titlespacing*{\section}{0pt}{9pt}{3pt}
-\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+\titleformat{\section}{\fontsize{12}{14}\selectfont\bfseries}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\fontsize{10}{12}\selectfont\bfseries}{\thesubsection}{0.8em}{}
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+\titlespacing*{\subsection}{0pt}{7pt}{3pt}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xurl}
 \hypersetup{pdftitle={SafeDischarge: Fair, Explainable and Privacy-Preserving Readmission Risk Prediction},
@@ -49,15 +48,28 @@
 \setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
 \setlength{\floatsep}{8pt plus 2pt minus 2pt}
 
+% Abstract at full 10pt size (LaTeX's default abstract is 9pt), indented like a paper
+\renewenvironment{abstract}{\begin{list}{}{\leftmargin=2em\rightmargin=2em\topsep=0pt}\item\relax\textbf{Abstract.}\ }{\end{list}}
+
 \begin{document}
 
 % ---------- Title block (team name, members, emails) ----------
-{\fontsize{15}{18}\selectfont\bfseries\color{headblue}\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000
-SafeDischarge: Fair, Explainable and Privacy-Preserving Readmission Risk Prediction for Diabetic Patients\par}
-\vspace{2pt}{\color{headblue}\rule{\textwidth}{0.6pt}}\par
-\textbf{Team:} SafeDischarge\\
-\textbf{Members:} Nguyen Hoang Truong Giang (HOANGTRU003@e.ntu.edu.sg)\\
-\textbf{Code and results:} \url{https://github.com/jilkabe/safedischarge}
+\begin{center}
+{\fontsize{15}{18.5}\selectfont\bfseries\hyphenpenalty=10000\exhyphenpenalty=10000
+SafeDischarge: Fair, Explainable and Privacy-Preserving\\Readmission Risk Prediction for Diabetic Patients\par}
+\vspace{8pt}
+\textbf{Team:} SafeDischarge\\[2pt]
+\textbf{Member:} Nguyen Hoang Truong Giang \textperiodcentered{} HOANGTRU003@e.ntu.edu.sg\\[2pt]
+AI6101 Introduction to AI and AI Ethics, Nanyang Technological University\\[2pt]
+Code and results: \url{https://github.com/jilkabe/safedischarge}
+\end{center}
+
+\vspace{2pt}
+\begin{abstract}
+Diabetic inpatients are often readmitted within 30 days of discharge, but follow-up resources such as nurse calls and early appointments are limited. We present \textbf{SafeDischarge}, a discharge-planning assistant that ranks patients by 30-day readmission risk at a fixed follow-up capacity, explains each flag with reasons linked to follow-up actions, and is trained across hospitals without pooling patient records. On the public Diabetes 130-US Hospitals dataset (99,340 stays), a tuned gradient-boosting model places 40.8\% of readmissions in the top 20\% of the list, double the yield of random selection. All three Responsible AI practices are implemented and measured. \emph{Explainability:} SHAP reasons pass a faithfulness test; removing a patient's top-3 reasons lowers risk by 29\%, versus 2.7\% for three random variables. \emph{Fairness:} a permutation-tested audit found that patients aged 80+ were under-detected; per-age-group thresholds closed the gap (21.5 → 6.8 points, p\,=\,0.39) at a cost of 1.1 points of recall. \emph{Privacy:} federated learning with secure aggregation nearly matches pooled training (AUROC 0.675 vs 0.677), and differential privacy at ε\,=\,8 reduces a membership-inference attack to chance.
+
+\vspace{3pt}\noindent\textbf{Keywords:} readmission prediction; explainable AI; algorithmic fairness; federated learning; differential privacy
+\end{abstract}
 
 \section{Introduction}\label{sec:1}
 
