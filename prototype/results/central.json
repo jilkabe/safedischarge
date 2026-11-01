@@ -1,0 +1,262 @@
+{
+  "data": {
+    "encounters": 99340,
+    "patients": 69987,
+    "readmit_30d_rate": 0.1139,
+    "race_share": {
+      "Caucasian": 0.7471,
+      "AfricanAmerican": 0.189,
+      "Unknown": 0.0225,
+      "Hispanic": 0.0203,
+      "Other": 0.0148,
+      "Asian": 0.0063
+    }
+  },
+  "split": {
+    "train": 69613,
+    "val": 14868,
+    "test": 14859
+  },
+  "models": {
+    "logistic_regression": {
+      "auroc": 0.667,
+      "auprc": 0.2108,
+      "recall_at_capacity": 0.3611,
+      "brier": 0.2282,
+      "race_recall_gap": 0.0549
+    },
+    "gradient_boosting": {
+      "auroc": 0.6814,
+      "auprc": 0.2328,
+      "recall_at_capacity": 0.4075,
+      "brier": 0.2154,
+      "race_recall_gap": 0.0965
+    },
+    "mlp": {
+      "auroc": 0.6812,
+      "auprc": 0.2297,
+      "recall_at_capacity": 0.3992,
+      "brier": 0.2148,
+      "race_recall_gap": 0.09
+    }
+  },
+  "race_as_feature": {
+    "without_race": {
+      "auroc": 0.6814,
+      "auprc": 0.2328,
+      "recall_at_capacity": 0.4075,
+      "brier": 0.2154,
+      "race_recall_gap": 0.0965
+    },
+    "with_race": {
+      "auroc": 0.6814,
+      "auprc": 0.2337,
+      "recall_at_capacity": 0.401,
+      "brier": 0.2147,
+      "race_recall_gap": 0.0789
+    }
+  },
+  "calibration": {
+    "brier_raw": 0.2154,
+    "brier_calibrated": 0.0954
+  },
+  "fairness_baseline": {
+    "race": {
+      "recall_gap": 0.0965,
+      "table": [
+        {
+          "group": "Caucasian",
+          "n": 11129,
+          "n_pos": 1264,
+          "recall": 0.4035,
+          "ci_low": 0.3762,
+          "ci_high": 0.4284,
+          "flag_rate": 0.1995,
+          "reportable": true
+        },
+        {
+          "group": "AfricanAmerican",
+          "n": 2817,
+          "n_pos": 330,
+          "recall": 0.4212,
+          "ci_low": 0.3711,
+          "ci_high": 0.4758,
+          "flag_rate": 0.2144,
+          "reportable": true
+        },
+        {
+          "group": "Unknown",
+          "n": 320,
+          "n_pos": 20,
+          "recall": 0.3,
+          "ci_low": 0.1,
+          "ci_high": 0.5,
+          "flag_rate": 0.1438,
+          "reportable": false
+        },
+        {
+          "group": "Hispanic",
+          "n": 307,
+          "n_pos": 38,
+          "recall": 0.5,
+          "ci_low": 0.3421,
+          "ci_high": 0.6579,
+          "flag_rate": 0.1987,
+          "reportable": true
+        },
+        {
+          "group": "Other",
+          "n": 192,
+          "n_pos": 22,
+          "recall": 0.4091,
+          "ci_low": 0.1818,
+          "ci_high": 0.6364,
+          "flag_rate": 0.1615,
+          "reportable": false
+        },
+        {
+          "group": "Asian",
+          "n": 94,
+          "n_pos": 7,
+          "recall": 0.2857,
+          "ci_low": 0.0,
+          "ci_high": 0.5714,
+          "flag_rate": 0.1064,
+          "reportable": false
+        }
+      ]
+    },
+    "gender": {
+      "recall_gap": 0.0179,
+      "table": [
+        {
+          "group": "Female",
+          "n": 7951,
+          "n_pos": 897,
+          "recall": 0.4158,
+          "ci_low": 0.3802,
+          "ci_high": 0.4437,
+          "flag_rate": 0.2037,
+          "reportable": true
+        },
+        {
+          "group": "Male",
+          "n": 6908,
+          "n_pos": 784,
+          "recall": 0.398,
+          "ci_low": 0.3648,
+          "ci_high": 0.4343,
+          "flag_rate": 0.1957,
+          "reportable": true
+        }
+      ]
+    },
+    "age_group": {
+      "recall_gap": 0.2151,
+      "table": [
+        {
+          "group": "60-79",
+          "n": 7121,
+          "n_pos": 830,
+          "recall": 0.4012,
+          "ci_low": 0.3675,
+          "ci_high": 0.4344,
+          "flag_rate": 0.2205,
+          "reportable": true
+        },
+        {
+          "group": "40-59",
+          "n": 4028,
+          "n_pos": 412,
+          "recall": 0.415,
+          "ci_low": 0.3665,
+          "ci_high": 0.4636,
+          "flag_rate": 0.1616,
+          "reportable": true
+        },
+        {
+          "group": "80+",
+          "n": 2803,
+          "n_pos": 333,
+          "recall": 0.3604,
+          "ci_low": 0.3077,
+          "ci_high": 0.41,
+          "flag_rate": 0.2048,
+          "reportable": true
+        },
+        {
+          "group": "<40",
+          "n": 907,
+          "n_pos": 106,
+          "recall": 0.5755,
+          "ci_low": 0.4811,
+          "ci_high": 0.6698,
+          "flag_rate": 0.1951,
+          "reportable": true
+        }
+      ]
+    }
+  },
+  "shap_top15": [
+    {
+      "feature": "number_inpatient",
+      "mean_abs_shap": 0.1928
+    },
+    {
+      "feature": "discharge_group=home",
+      "mean_abs_shap": 0.1755
+    },
+    {
+      "feature": "prior_stays",
+      "mean_abs_shap": 0.1109
+    },
+    {
+      "feature": "discharge_group=care_facility",
+      "mean_abs_shap": 0.0804
+    },
+    {
+      "feature": "age_years",
+      "mean_abs_shap": 0.0619
+    },
+    {
+      "feature": "number_diagnoses",
+      "mean_abs_shap": 0.0552
+    },
+    {
+      "feature": "prior_readmit_30d",
+      "mean_abs_shap": 0.0468
+    },
+    {
+      "feature": "time_in_hospital",
+      "mean_abs_shap": 0.0429
+    },
+    {
+      "feature": "num_lab_procedures",
+      "mean_abs_shap": 0.0411
+    },
+    {
+      "feature": "num_medications",
+      "mean_abs_shap": 0.0353
+    },
+    {
+      "feature": "diag_1_group=circulatory",
+      "mean_abs_shap": 0.0335
+    },
+    {
+      "feature": "diag_1_group=respiratory",
+      "mean_abs_shap": 0.0301
+    },
+    {
+      "feature": "on_diabetes_med=no",
+      "mean_abs_shap": 0.0249
+    },
+    {
+      "feature": "number_emergency",
+      "mean_abs_shap": 0.0248
+    },
+    {
+      "feature": "discharge_group=home_with_care",
+      "mean_abs_shap": 0.0198
+    }
+  ]
+}

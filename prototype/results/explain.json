@@ -1,0 +1,18 @@
+{
+  "flagged_patients": 2972,
+  "mean_flagged_score": 0.6535,
+  "background_draws": 20,
+  "patients_with_3_positive_reasons": 1.0,
+  "remove_top3_shap": {
+    "mean_score_drop": 0.192,
+    "mean_relative_drop": 0.291,
+    "share_leaving_flagged_list": 0.9674
+  },
+  "remove_random3": {
+    "mean_score_drop": 0.0178,
+    "mean_relative_drop": 0.0271,
+    "share_leaving_flagged_list": 0.1507
+  },
+  "ratio_top3_vs_random": 10.8,
+  "share_patients_top3_beats_random": 0.9899
+}

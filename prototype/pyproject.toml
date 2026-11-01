@@ -1,0 +1,19 @@
+[project]
+name = "safedischarge"
+version = "0.1.0"
+description = "SafeDischarge prototype: fair, explainable, privacy-preserving readmission risk"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "pandas>=2.2",
+  "numpy>=1.26",
+  "scikit-learn>=1.5",
+  "shap>=0.46",
+  "fairlearn>=0.11",
+  "torch>=2.4",
+  "opacus>=1.5",
+  "matplotlib>=3.9",
+  "streamlit>=1.39",
+]
+
+[tool.uv]
+package = false

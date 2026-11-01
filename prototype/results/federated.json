@@ -1,0 +1,247 @@
+{
+  "config": {
+    "hospitals": 5,
+    "rounds": 20,
+    "local_epochs": 1,
+    "batch": 256,
+    "lr": 0.001,
+    "delta": 1e-05,
+    "clip": 1.0,
+    "dirichlet_alpha": 0.5
+  },
+  "hospitals": [
+    {
+      "hospital": 0,
+      "encounters": 6518,
+      "readmit_rate": 0.1079,
+      "share_Caucasian": 0.344,
+      "share_AfricanAmerican": 0.472,
+      "share_80plus": 0.065
+    },
+    {
+      "hospital": 1,
+      "encounters": 20524,
+      "readmit_rate": 0.1154,
+      "share_Caucasian": 0.617,
+      "share_AfricanAmerican": 0.343,
+      "share_80plus": 0.225
+    },
+    {
+      "hospital": 2,
+      "encounters": 14821,
+      "readmit_rate": 0.121,
+      "share_Caucasian": 0.91,
+      "share_AfricanAmerican": 0.048,
+      "share_80plus": 0.353
+    },
+    {
+      "hospital": 3,
+      "encounters": 14992,
+      "readmit_rate": 0.117,
+      "share_Caucasian": 0.83,
+      "share_AfricanAmerican": 0.136,
+      "share_80plus": 0.17
+    },
+    {
+      "hospital": 4,
+      "encounters": 12758,
+      "readmit_rate": 0.1016,
+      "share_Caucasian": 0.87,
+      "share_AfricanAmerican": 0.026,
+      "share_80plus": 0.033
+    }
+  ],
+  "local_only_per_hospital": [
+    {
+      "hospital": 0,
+      "auroc": 0.6493,
+      "auprc": 0.2071,
+      "recall_at_capacity": 0.3623,
+      "brier": 0.2122,
+      "age_group_gap": 0.2363,
+      "race_gap": 0.012,
+      "gender_gap": 0.0622
+    },
+    {
+      "hospital": 1,
+      "auroc": 0.6659,
+      "auprc": 0.22,
+      "recall_at_capacity": 0.3789,
+      "brier": 0.2096,
+      "age_group_gap": 0.2409,
+      "race_gap": 0.0779,
+      "gender_gap": 0.0217
+    },
+    {
+      "hospital": 2,
+      "auroc": 0.6596,
+      "auprc": 0.2149,
+      "recall_at_capacity": 0.3766,
+      "brier": 0.2346,
+      "age_group_gap": 0.1894,
+      "race_gap": 0.0237,
+      "gender_gap": 0.0066
+    },
+    {
+      "hospital": 3,
+      "auroc": 0.6627,
+      "auprc": 0.2173,
+      "recall_at_capacity": 0.3712,
+      "brier": 0.2063,
+      "age_group_gap": 0.1555,
+      "race_gap": 0.0361,
+      "gender_gap": 0.0216
+    },
+    {
+      "hospital": 4,
+      "auroc": 0.6603,
+      "auprc": 0.2029,
+      "recall_at_capacity": 0.3575,
+      "brier": 0.2049,
+      "age_group_gap": 0.0945,
+      "race_gap": 0.0719,
+      "gender_gap": 0.07
+    }
+  ],
+  "secure_aggregation_check": {
+    "secure_agg_max_abs_error": 2.8312206268310547e-07,
+    "masked_vs_plain_correlation": 0.0184
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "settings": {
+    "local_only (mean of 5)": {
+      "auroc": 0.6603,
+      "auprc": 0.2136,
+      "recall_at_capacity": 0.3716,
+      "brier": 0.2135,
+      "age_group_gap": 0.1724,
+      "race_gap": 0.0596,
+      "gender_gap": 0.0388,
+      "auroc_sd": 0.0005,
+      "auprc_sd": 0.0013,
+      "recall_at_capacity_sd": 0.0019,
+      "brier_sd": 0.0007,
+      "age_group_gap_sd": 0.0078,
+      "race_gap_sd": 0.0141,
+      "gender_gap_sd": 0.0059
+    },
+    "central (pooled)": {
+      "auroc": 0.6769,
+      "auprc": 0.2277,
+      "recall_at_capacity": 0.3924,
+      "brier": 0.215,
+      "age_group_gap": 0.2483,
+      "race_gap": 0.0637,
+      "gender_gap": 0.0117,
+      "membership_auc": 0.5105,
+      "auroc_sd": 0.0011,
+      "auprc_sd": 0.0034,
+      "recall_at_capacity_sd": 0.0012,
+      "brier_sd": 0.0012,
+      "age_group_gap_sd": 0.0204,
+      "race_gap_sd": 0.0389,
+      "gender_gap_sd": 0.0064,
+      "membership_auc_sd": 0.0038
+    },
+    "fedavg + secure agg": {
+      "auroc": 0.6745,
+      "auprc": 0.2277,
+      "recall_at_capacity": 0.3877,
+      "brier": 0.2187,
+      "age_group_gap": 0.2316,
+      "race_gap": 0.0757,
+      "gender_gap": 0.0317,
+      "membership_auc": 0.5082,
+      "auroc_sd": 0.001,
+      "auprc_sd": 0.0033,
+      "recall_at_capacity_sd": 0.0024,
+      "brier_sd": 0.0028,
+      "age_group_gap_sd": 0.0033,
+      "race_gap_sd": 0.0241,
+      "gender_gap_sd": 0.013,
+      "membership_auc_sd": 0.0033
+    },
+    "fedavg + DP (eps=1)": {
+      "auroc": 0.6443,
+      "auprc": 0.1885,
+      "recall_at_capacity": 0.3508,
+      "brier": 0.1088,
+      "age_group_gap": 0.078,
+      "race_gap": 0.0503,
+      "gender_gap": 0.0173,
+      "membership_auc": 0.499,
+      "max_epsilon_spent": 0.997,
+      "auroc_sd": 0.0012,
+      "auprc_sd": 0.0009,
+      "recall_at_capacity_sd": 0.0034,
+      "brier_sd": 0.0001,
+      "age_group_gap_sd": 0.0139,
+      "race_gap_sd": 0.006,
+      "gender_gap_sd": 0.0133,
+      "membership_auc_sd": 0.0006,
+      "max_epsilon_spent_sd": 0.0
+    },
+    "fedavg + DP (eps=3)": {
+      "auroc": 0.6574,
+      "auprc": 0.195,
+      "recall_at_capacity": 0.3619,
+      "brier": 0.1088,
+      "age_group_gap": 0.0625,
+      "race_gap": 0.063,
+      "gender_gap": 0.0186,
+      "membership_auc": 0.5003,
+      "max_epsilon_spent": 2.985,
+      "auroc_sd": 0.0021,
+      "auprc_sd": 0.001,
+      "recall_at_capacity_sd": 0.0031,
+      "brier_sd": 0.0,
+      "age_group_gap_sd": 0.0116,
+      "race_gap_sd": 0.0219,
+      "gender_gap_sd": 0.0133,
+      "membership_auc_sd": 0.0015,
+      "max_epsilon_spent_sd": 0.0
+    },
+    "fedavg + DP (eps=8)": {
+      "auroc": 0.6622,
+      "auprc": 0.2021,
+      "recall_at_capacity": 0.3694,
+      "brier": 0.1087,
+      "age_group_gap": 0.0951,
+      "race_gap": 0.0575,
+      "gender_gap": 0.015,
+      "membership_auc": 0.5001,
+      "max_epsilon_spent": 7.979,
+      "auroc_sd": 0.0016,
+      "auprc_sd": 0.0039,
+      "recall_at_capacity_sd": 0.0022,
+      "brier_sd": 0.0001,
+      "age_group_gap_sd": 0.0284,
+      "race_gap_sd": 0.015,
+      "gender_gap_sd": 0.0099,
+      "membership_auc_sd": 0.0006,
+      "max_epsilon_spent_sd": 0.0
+    },
+    "over-fitted control (no DP)": {
+      "auroc": 0.6008,
+      "auprc": 0.1525,
+      "recall_at_capacity": 0.2905,
+      "brier": 0.1623,
+      "age_group_gap": 0.0898,
+      "race_gap": 0.0835,
+      "gender_gap": 0.0299,
+      "membership_auc": 0.5923,
+      "auroc_sd": 0.008,
+      "auprc_sd": 0.0053,
+      "recall_at_capacity_sd": 0.0127,
+      "brier_sd": 0.0028,
+      "age_group_gap_sd": 0.0469,
+      "race_gap_sd": 0.059,
+      "gender_gap_sd": 0.0097,
+      "membership_auc_sd": 0.0017
+    }
+  }
+}

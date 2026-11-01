@@ -1,0 +1,6 @@
+.DS_Store
+~$*
+__pycache__/
+.venv/
+prototype/data/raw/
+prototype/results/artifacts.joblib

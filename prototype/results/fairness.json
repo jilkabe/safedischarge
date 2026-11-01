@@ -1,0 +1,576 @@
+{
+  "baseline": {
+    "auroc": 0.6814,
+    "auprc": 0.2328,
+    "recall_at_capacity": 0.4075,
+    "brier": 0.0954,
+    "flag_rate": 0.2,
+    "age_group_gap": 0.2151,
+    "age_group_gap_p": 0.0005,
+    "age_group_table": [
+      {
+        "group": "60-79",
+        "n": 7121,
+        "n_pos": 830,
+        "recall": 0.4012,
+        "ci_low": 0.3675,
+        "ci_high": 0.4344,
+        "flag_rate": 0.2205,
+        "reportable": true
+      },
+      {
+        "group": "40-59",
+        "n": 4028,
+        "n_pos": 412,
+        "recall": 0.415,
+        "ci_low": 0.3665,
+        "ci_high": 0.4636,
+        "flag_rate": 0.1616,
+        "reportable": true
+      },
+      {
+        "group": "80+",
+        "n": 2803,
+        "n_pos": 333,
+        "recall": 0.3604,
+        "ci_low": 0.3077,
+        "ci_high": 0.41,
+        "flag_rate": 0.2048,
+        "reportable": true
+      },
+      {
+        "group": "<40",
+        "n": 907,
+        "n_pos": 106,
+        "recall": 0.5755,
+        "ci_low": 0.4811,
+        "ci_high": 0.6698,
+        "flag_rate": 0.1951,
+        "reportable": true
+      }
+    ],
+    "race_gap": 0.0965,
+    "race_gap_p": 0.3088,
+    "race_table": [
+      {
+        "group": "Caucasian",
+        "n": 11129,
+        "n_pos": 1264,
+        "recall": 0.4035,
+        "ci_low": 0.3762,
+        "ci_high": 0.4284,
+        "flag_rate": 0.1995,
+        "reportable": true
+      },
+      {
+        "group": "AfricanAmerican",
+        "n": 2817,
+        "n_pos": 330,
+        "recall": 0.4212,
+        "ci_low": 0.3711,
+        "ci_high": 0.4758,
+        "flag_rate": 0.2144,
+        "reportable": true
+      },
+      {
+        "group": "Unknown",
+        "n": 320,
+        "n_pos": 20,
+        "recall": 0.3,
+        "ci_low": 0.1,
+        "ci_high": 0.5,
+        "flag_rate": 0.1438,
+        "reportable": false
+      },
+      {
+        "group": "Hispanic",
+        "n": 307,
+        "n_pos": 38,
+        "recall": 0.5,
+        "ci_low": 0.3421,
+        "ci_high": 0.6579,
+        "flag_rate": 0.1987,
+        "reportable": true
+      },
+      {
+        "group": "Other",
+        "n": 192,
+        "n_pos": 22,
+        "recall": 0.4091,
+        "ci_low": 0.1818,
+        "ci_high": 0.6364,
+        "flag_rate": 0.1615,
+        "reportable": false
+      },
+      {
+        "group": "Asian",
+        "n": 94,
+        "n_pos": 7,
+        "recall": 0.2857,
+        "ci_low": 0.0,
+        "ci_high": 0.5714,
+        "flag_rate": 0.1064,
+        "reportable": false
+      }
+    ],
+    "gender_gap": 0.0179,
+    "gender_gap_p": 0.4928,
+    "gender_table": [
+      {
+        "group": "Female",
+        "n": 7951,
+        "n_pos": 897,
+        "recall": 0.4158,
+        "ci_low": 0.3802,
+        "ci_high": 0.4437,
+        "flag_rate": 0.2037,
+        "reportable": true
+      },
+      {
+        "group": "Male",
+        "n": 6908,
+        "n_pos": 784,
+        "recall": 0.398,
+        "ci_low": 0.3648,
+        "ci_high": 0.4343,
+        "flag_rate": 0.1957,
+        "reportable": true
+      }
+    ]
+  },
+  "reweighting": {
+    "auroc": 0.6776,
+    "auprc": 0.2258,
+    "recall_at_capacity": 0.3974,
+    "brier": 0.0957,
+    "flag_rate": 0.2,
+    "age_group_gap": 0.1349,
+    "age_group_gap_p": 0.0235,
+    "age_group_table": [
+      {
+        "group": "60-79",
+        "n": 7121,
+        "n_pos": 830,
+        "recall": 0.3651,
+        "ci_low": 0.3337,
+        "ci_high": 0.397,
+        "flag_rate": 0.1974,
+        "reportable": true
+      },
+      {
+        "group": "40-59",
+        "n": 4028,
+        "n_pos": 412,
+        "recall": 0.4345,
+        "ci_low": 0.3895,
+        "ci_high": 0.4854,
+        "flag_rate": 0.1715,
+        "reportable": true
+      },
+      {
+        "group": "80+",
+        "n": 2803,
+        "n_pos": 333,
+        "recall": 0.3994,
+        "ci_low": 0.3423,
+        "ci_high": 0.452,
+        "flag_rate": 0.2608,
+        "reportable": true
+      },
+      {
+        "group": "<40",
+        "n": 907,
+        "n_pos": 106,
+        "recall": 0.5,
+        "ci_low": 0.4057,
+        "ci_high": 0.5993,
+        "flag_rate": 0.1588,
+        "reportable": true
+      }
+    ],
+    "race_gap": 0.1068,
+    "race_gap_p": 0.2504,
+    "race_table": [
+      {
+        "group": "Caucasian",
+        "n": 11129,
+        "n_pos": 1264,
+        "recall": 0.3932,
+        "ci_low": 0.3635,
+        "ci_high": 0.4205,
+        "flag_rate": 0.1987,
+        "reportable": true
+      },
+      {
+        "group": "AfricanAmerican",
+        "n": 2817,
+        "n_pos": 330,
+        "recall": 0.4091,
+        "ci_low": 0.3576,
+        "ci_high": 0.4622,
+        "flag_rate": 0.2173,
+        "reportable": true
+      },
+      {
+        "group": "Unknown",
+        "n": 320,
+        "n_pos": 20,
+        "recall": 0.25,
+        "ci_low": 0.1,
+        "ci_high": 0.45,
+        "flag_rate": 0.1594,
+        "reportable": false
+      },
+      {
+        "group": "Hispanic",
+        "n": 307,
+        "n_pos": 38,
+        "recall": 0.5,
+        "ci_low": 0.3421,
+        "ci_high": 0.6579,
+        "flag_rate": 0.1922,
+        "reportable": true
+      },
+      {
+        "group": "Other",
+        "n": 192,
+        "n_pos": 22,
+        "recall": 0.4545,
+        "ci_low": 0.2489,
+        "ci_high": 0.6818,
+        "flag_rate": 0.1562,
+        "reportable": false
+      },
+      {
+        "group": "Asian",
+        "n": 94,
+        "n_pos": 7,
+        "recall": 0.2857,
+        "ci_low": 0.0,
+        "ci_high": 0.5714,
+        "flag_rate": 0.0957,
+        "reportable": false
+      }
+    ],
+    "gender_gap": 0.0443,
+    "gender_gap_p": 0.0585,
+    "gender_table": [
+      {
+        "group": "Female",
+        "n": 7951,
+        "n_pos": 897,
+        "recall": 0.4181,
+        "ci_low": 0.384,
+        "ci_high": 0.4476,
+        "flag_rate": 0.2075,
+        "reportable": true
+      },
+      {
+        "group": "Male",
+        "n": 6908,
+        "n_pos": 784,
+        "recall": 0.3737,
+        "ci_low": 0.3424,
+        "ci_high": 0.4094,
+        "flag_rate": 0.1914,
+        "reportable": true
+      }
+    ],
+    "positive_boost": {
+      "40-59": 1.732,
+      "60-79": 1.392,
+      "80+": 1.681,
+      "<40": 1.0
+    }
+  },
+  "exp_gradient": {
+    "auroc": 0.6453,
+    "auprc": 0.1689,
+    "recall_at_capacity": 0.3266,
+    "brier": 0.1702,
+    "flag_rate": 0.2,
+    "age_group_gap": 0.5663,
+    "age_group_gap_p": 0.0005,
+    "age_group_table": [
+      {
+        "group": "60-79",
+        "n": 7121,
+        "n_pos": 830,
+        "recall": 0.5663,
+        "ci_low": 0.5361,
+        "ci_high": 0.5952,
+        "flag_rate": 0.381,
+        "reportable": true
+      },
+      {
+        "group": "40-59",
+        "n": 4028,
+        "n_pos": 412,
+        "recall": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "flag_rate": 0.0,
+        "reportable": true
+      },
+      {
+        "group": "80+",
+        "n": 2803,
+        "n_pos": 333,
+        "recall": 0.0781,
+        "ci_low": 0.048,
+        "ci_high": 0.1051,
+        "flag_rate": 0.0268,
+        "reportable": true
+      },
+      {
+        "group": "<40",
+        "n": 907,
+        "n_pos": 106,
+        "recall": 0.5,
+        "ci_low": 0.4057,
+        "ci_high": 0.5943,
+        "flag_rate": 0.2029,
+        "reportable": true
+      }
+    ],
+    "race_gap": 0.1565,
+    "race_gap_p": 0.0605,
+    "race_table": [
+      {
+        "group": "Caucasian",
+        "n": 11129,
+        "n_pos": 1264,
+        "recall": 0.3347,
+        "ci_low": 0.3081,
+        "ci_high": 0.3608,
+        "flag_rate": 0.2043,
+        "reportable": true
+      },
+      {
+        "group": "AfricanAmerican",
+        "n": 2817,
+        "n_pos": 330,
+        "recall": 0.2909,
+        "ci_low": 0.2424,
+        "ci_high": 0.3394,
+        "flag_rate": 0.1899,
+        "reportable": true
+      },
+      {
+        "group": "Unknown",
+        "n": 320,
+        "n_pos": 20,
+        "recall": 0.25,
+        "ci_low": 0.1,
+        "ci_high": 0.45,
+        "flag_rate": 0.1406,
+        "reportable": false
+      },
+      {
+        "group": "Hispanic",
+        "n": 307,
+        "n_pos": 38,
+        "recall": 0.4474,
+        "ci_low": 0.2895,
+        "ci_high": 0.5789,
+        "flag_rate": 0.2117,
+        "reportable": true
+      },
+      {
+        "group": "Other",
+        "n": 192,
+        "n_pos": 22,
+        "recall": 0.3182,
+        "ci_low": 0.1364,
+        "ci_high": 0.5,
+        "flag_rate": 0.1667,
+        "reportable": false
+      },
+      {
+        "group": "Asian",
+        "n": 94,
+        "n_pos": 7,
+        "recall": 0.1429,
+        "ci_low": 0.0,
+        "ci_high": 0.4286,
+        "flag_rate": 0.2234,
+        "reportable": false
+      }
+    ],
+    "gender_gap": 0.0407,
+    "gender_gap_p": 0.085,
+    "gender_table": [
+      {
+        "group": "Female",
+        "n": 7951,
+        "n_pos": 897,
+        "recall": 0.3456,
+        "ci_low": 0.316,
+        "ci_high": 0.3802,
+        "flag_rate": 0.2036,
+        "reportable": true
+      },
+      {
+        "group": "Male",
+        "n": 6908,
+        "n_pos": 784,
+        "recall": 0.3048,
+        "ci_low": 0.2691,
+        "ci_high": 0.3387,
+        "flag_rate": 0.1959,
+        "reportable": true
+      }
+    ]
+  },
+  "group_thresholds": {
+    "auroc": 0.6814,
+    "auprc": 0.2328,
+    "recall_at_capacity": 0.3968,
+    "brier": 0.0954,
+    "flag_rate": 0.2,
+    "age_group_gap": 0.0675,
+    "age_group_gap_p": 0.3858,
+    "age_group_table": [
+      {
+        "group": "60-79",
+        "n": 7121,
+        "n_pos": 830,
+        "recall": 0.3759,
+        "ci_low": 0.3452,
+        "ci_high": 0.4096,
+        "flag_rate": 0.2067,
+        "reportable": true
+      },
+      {
+        "group": "40-59",
+        "n": 4028,
+        "n_pos": 412,
+        "recall": 0.4393,
+        "ci_low": 0.3908,
+        "ci_high": 0.4927,
+        "flag_rate": 0.181,
+        "reportable": true
+      },
+      {
+        "group": "80+",
+        "n": 2803,
+        "n_pos": 333,
+        "recall": 0.3814,
+        "ci_low": 0.3273,
+        "ci_high": 0.434,
+        "flag_rate": 0.2358,
+        "reportable": true
+      },
+      {
+        "group": "<40",
+        "n": 907,
+        "n_pos": 106,
+        "recall": 0.4434,
+        "ci_low": 0.3491,
+        "ci_high": 0.5472,
+        "flag_rate": 0.1213,
+        "reportable": true
+      }
+    ],
+    "race_gap": 0.0821,
+    "race_gap_p": 0.3868,
+    "race_table": [
+      {
+        "group": "Caucasian",
+        "n": 11129,
+        "n_pos": 1264,
+        "recall": 0.3916,
+        "ci_low": 0.3639,
+        "ci_high": 0.4177,
+        "flag_rate": 0.1999,
+        "reportable": true
+      },
+      {
+        "group": "AfricanAmerican",
+        "n": 2817,
+        "n_pos": 330,
+        "recall": 0.4152,
+        "ci_low": 0.3606,
+        "ci_high": 0.4727,
+        "flag_rate": 0.2133,
+        "reportable": true
+      },
+      {
+        "group": "Unknown",
+        "n": 320,
+        "n_pos": 20,
+        "recall": 0.3,
+        "ci_low": 0.1,
+        "ci_high": 0.5,
+        "flag_rate": 0.1469,
+        "reportable": false
+      },
+      {
+        "group": "Hispanic",
+        "n": 307,
+        "n_pos": 38,
+        "recall": 0.4737,
+        "ci_low": 0.3158,
+        "ci_high": 0.6316,
+        "flag_rate": 0.1987,
+        "reportable": true
+      },
+      {
+        "group": "Other",
+        "n": 192,
+        "n_pos": 22,
+        "recall": 0.4091,
+        "ci_low": 0.1818,
+        "ci_high": 0.6364,
+        "flag_rate": 0.1562,
+        "reportable": false
+      },
+      {
+        "group": "Asian",
+        "n": 94,
+        "n_pos": 7,
+        "recall": 0.2857,
+        "ci_low": 0.0,
+        "ci_high": 0.5714,
+        "flag_rate": 0.0851,
+        "reportable": false
+      }
+    ],
+    "gender_gap": 0.0169,
+    "gender_gap_p": 0.5012,
+    "gender_table": [
+      {
+        "group": "Female",
+        "n": 7951,
+        "n_pos": 897,
+        "recall": 0.4047,
+        "ci_low": 0.3695,
+        "ci_high": 0.4314,
+        "flag_rate": 0.2035,
+        "reportable": true
+      },
+      {
+        "group": "Male",
+        "n": 6908,
+        "n_pos": 784,
+        "recall": 0.3878,
+        "ci_low": 0.3552,
+        "ci_high": 0.4235,
+        "flag_rate": 0.196,
+        "reportable": true
+      }
+    ],
+    "thresholds": {
+      "40-59": 0.5695669686301005,
+      "60-79": 0.5890937864977518,
+      "80+": 0.5723007877584068,
+      "<40": 0.654317425668751
+    },
+    "score_shift": {
+      "40-59": -0.011130318497978853,
+      "60-79": 0.008396499369672461,
+      "80+": -0.008396499369672572,
+      "<40": 0.07362013854067162
+    }
+  }
+}
